@@ -1,5 +1,122 @@
 .title {
     display: flex;
     justify-content: flex-start;
-    margin: 5rem 10em;
+    margin: 5rem 15em;
+    margin-bottom: 0;
+}
+
+#pastOrdersTitle {
+    margin: 0;
+}
+
+#currentOrder {
+    display: flex;
+    justify-content: flex-start;
+    margin: 5rem 15em;
+    width: 60%;
+    height: 100px;
+    background-color: darkorchid;
+    border-radius: 0.6rem;
+    flex-direction: column;
+}
+
+#currentOrderTitle {
+    text-align: center;
+    margin: 0;
+    font-size: larger;
+}
+
+#mini1 {
+    font-size: 10;
+    margin: 0;
+    font-size: large;
+    margin-left: 10pt;
+}
+
+#mini2 {
+    font-size: 10;
+    margin: 0;
+    margin-right: 10pt;
+    margin-left: 10pt;
+    font-size: large;
+}
+
+#viewDetails {
+    width: 20%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-left: 40%;
+}
+
+.orders{
+    width: 60%;
+    height: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 5rem 15em;
+    margin-top: 0;
+    flex-direction: column;
+}
+
+.order {
+    width: 60%;
+    height: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 2rem 10rem;
+    flex-direction: row;
+}
+
+.info{
+    flex-direction: column;
+    padding: 10pt;
+    margin-top: 0;
+}
+
+.orderDesc {
+    font-size: small;
+    color: black;
+    margin-top: 0;
+}
+
+.reorder {
+    background: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 0.9rem;
+    padding: 0.4rem 2rem;
+    margin: 0rem 0.5rem;
+    border: 1px solid var(--gray);
+    border-radius: 0.6rem;
+    box-shadow: 0rem 0.05rem 0.05rem 0.05rem #e0e0e0;
+    color: blue;
+}
+
+.help {
+    background: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 0.9rem;
+    padding: 0.4rem 2rem;
+    margin: 0rem 0.5rem;
+    border: 1px solid var(--gray);
+    border-radius: 0.6rem;
+    box-shadow: 0rem 0.05rem 0.05rem 0.05rem #e0e0e0;
+    color: red;
+}
+
+.images {
+    width: 50%;
+    height: 155px;
+    background-color: gray;
+    border-radius: 0.6rem;
+}
+
+.itemNames {
+    font-size: large;
+    font-weight: bold;
+    margin: 0;
 }
