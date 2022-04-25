@@ -1,19 +1,18 @@
 import React from 'react'
 import './Checkout.css'
+import CurrentOrder from './CurrentOrder';
+import Help from './Help';
 
 export default function Checkout() {
 
   // Example of current order in progress
   const currentOrderInProgress = true;
-  var currentOrder;
-  if (currentOrderInProgress) {
-    currentOrder = {
-      'id': '934rjfe',
-      'store': 'store1',
-      'items': ['chips', 'chips'],
-      'timeToProcess': 4
-    }
-  }
+  var currentOrder = {
+    'id': '934rjfe',
+    'store': 'store1',
+    'items': ['chips', 'chips'],
+    'timeToProcess': 4
+  };
 
   // Example of past orders
   var chip1 = {
@@ -36,9 +35,15 @@ export default function Checkout() {
     'item names': 'chip1'
   });
 
+  // for view current order popup
+  const [viewCurrentOrder, setViewCurrentOrder] = React.useState(false);
   const viewCurrentOrderDetails = () => {
-
+    setViewCurrentOrder(true);
   }
+
+  // for view FAQ popup
+  const [viewHelp, setViewHelp] = React. useState(false);
+  const viewHelpPage = () => { setViewHelp(true) };
 
   return (
     <div>
@@ -47,12 +52,15 @@ export default function Checkout() {
         {currentOrderInProgress && 
           <div id='currentOrder'>
             <h1 id='currentOrderTitle'>Current Order</h1>
-            <h2 id='mini1'>{currentOrder['store']}</h2>
-            <h2 id='mini2'>{currentOrder['timeToProcess'] + ' mins'}</h2>
-            <button id='viewDetails' onClick={viewCurrentOrderDetails}>View Details</button>
+            <div className='rowInfo'>
+              <h2 id='mini1'>{currentOrder['store']}</h2>
+              <h2 id='mini2'>{currentOrder['timeToProcess'] + ' mins'}</h2>
+            </div>
+            <button id='viewDetails' onClick={viewCurrentOrderDetails}>View Details {'>'}</button>
           </div>
         }
       </div>
+
       
       <div className='title'>
         <h1 id='pastOrdersTitle'>Past Orders</h1>
@@ -77,7 +85,7 @@ export default function Checkout() {
               </p>
               <br/>
               <button className='reorder'>Reorder</button>
-              <button className='help'>Help</button>
+              <button className='help' onClick={viewHelpPage}>Help</button>
               </div>
             <br/>
             </div>
@@ -86,6 +94,10 @@ export default function Checkout() {
         <br/>
       </div>
 
+      <CurrentOrder trigger={viewCurrentOrder} setTrigger={setViewCurrentOrder} orderInfo={currentOrder}>
+      </CurrentOrder>
+
+      <Help trigger={viewHelp} setTrigger={setViewHelp}></Help>
     </div>
   )
 }
