@@ -4,7 +4,6 @@
     left: 0;
     display: flex;
     width: 100%;
-    height: 100%;
     background-color: white;
     justify-content: flex-start;
     flex-direction: column;
@@ -25,6 +24,7 @@
     color: white;
     font-style: bold;
     font-size: x-large;
+    margin-top: 1.5%;
 }
 
 .topBar .back-btn {
@@ -51,6 +51,13 @@
     margin: 5rem 15em;
 }
 
+.faq #image {
+    width: 100%;
+    height: 155px;
+    background-color: gray;
+    border-radius: 0.6rem;
+}
+
 .faq .rows {
     display: flex;
     flex-direction: row;
@@ -58,6 +65,12 @@
 
 .faq .row .columns {
     flex-direction: column;
+}
+
+.titles {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 
 #yourOrders {
@@ -78,6 +91,9 @@
 
 .contact #question {
     margin:0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 
 .contact #call {

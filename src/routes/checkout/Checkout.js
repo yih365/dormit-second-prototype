@@ -1,4 +1,5 @@
 import React from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './Checkout.css'
 import CurrentOrder from './CurrentOrder';
 import Help from './Help';
@@ -10,8 +11,11 @@ export default function Checkout() {
   var currentOrder = {
     'id': '934rjfe',
     'store': 'store1',
-    'items': ['chips', 'chips'],
-    'timeToProcess': 4
+    'items': ['chips', 'chips2'],
+    'amount': [1, 2],
+    'timeToProcess': 4,
+    'date': 'March 23 at 8:05pm',
+    'progress': 3
   };
 
   // Example of past orders
@@ -50,6 +54,7 @@ export default function Checkout() {
       {/* current order in progress box */}
       <div>
         {currentOrderInProgress && 
+        <div className='outsideBox'>
           <div id='currentOrder'>
             <h1 id='currentOrderTitle'>Current Order</h1>
             <div className='rowInfo'>
@@ -58,6 +63,7 @@ export default function Checkout() {
             </div>
             <button id='viewDetails' onClick={viewCurrentOrderDetails}>View Details {'>'}</button>
           </div>
+        </div>
         }
       </div>
 

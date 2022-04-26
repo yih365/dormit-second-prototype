@@ -1,4 +1,5 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './Help.css'
 
 function Help(props) {
@@ -14,10 +15,13 @@ function Help(props) {
             </div>
             
             <div className='faq'>
+                <p id='image'> </p>
+                <br/>
                 <h1>FAQ</h1>
+                <br/>
                 <div className='rows'>
                     <div className='columns'>
-                        <h2>How Dormit Works</h2>
+                        <h2 className='titles'>How Dormit Works</h2>
                         <p>How does Dormit work?</p>
                         <p>How does Dormit work?</p>
                         <p>How does Dormit work?</p>
@@ -27,7 +31,7 @@ function Help(props) {
                     <br/>
 
                     <div className='columns' id='yourOrders'>
-                        <h2>Your Orders</h2>
+                        <h2 className='titles'>Your Orders</h2>
                         <p>What happened to my order?</p>
                         <p>What happened to my order?</p>
                         <p>What happened to my order?</p>
@@ -37,7 +41,7 @@ function Help(props) {
                     <br/>
 
                     <div className='columns' id='otherQs'>
-                        <h2>Other Questions</h2>
+                        <h2 className='titles'>Other Questions</h2>
                         <p>What is going on?</p>
                         <p>What is going on?</p>
                         <p>What is going on?</p>
