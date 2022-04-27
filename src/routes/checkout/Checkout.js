@@ -50,11 +50,11 @@ export default function Checkout() {
   const viewHelpPage = () => { setViewHelp(true) };
 
   return (
-    <div>
+    <div className='outsideBox'>
       {/* current order in progress box */}
       <div>
         {currentOrderInProgress && 
-        <div className='outsideBox'>
+        <div>
           <div id='currentOrder'>
             <h1 id='currentOrderTitle'>Current Order</h1>
             <div className='rowInfo'>
@@ -67,7 +67,6 @@ export default function Checkout() {
         }
       </div>
 
-      
       <div className='title'>
         <h1 id='pastOrdersTitle'>Past Orders</h1>
       </div>
@@ -97,7 +96,6 @@ export default function Checkout() {
             </div>
           );
         })}
-        <br/>
       </div>
 
       <CurrentOrder trigger={viewCurrentOrder} setTrigger={setViewCurrentOrder} orderInfo={currentOrder}>

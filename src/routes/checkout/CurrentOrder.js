@@ -36,6 +36,10 @@ function CurrentOrder(props) {
                 <br/>
                 <button className='close' onClick={closePage}>X</button>
             </div>
+            <br/>
+            <br/>
+            <br/>
+            <hr id='line'/>
 
             {/* section showing items ordered */}
             <div className='orderItems'>
@@ -58,8 +62,8 @@ function CurrentOrder(props) {
                         );
                     })}
                 </div>
-            </div>
             <hr/>
+            </div>
 
             {/* delivery progress */}
             <div className='deliveryProgress'>
