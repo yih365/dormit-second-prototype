@@ -38,6 +38,18 @@ export default function Checkout() {
     'price': 5.00,
     'item names': 'chip1'
   });
+  orders.push({
+    'items': [chip1],
+    'date': 'March 22 at 8:05pm',
+    'price': 5.00,
+    'item names': 'chip1'
+  });
+  orders.push({
+    'items': [chip1],
+    'date': 'March 22 at 8:05pm',
+    'price': 5.00,
+    'item names': 'chip1'
+  });
 
   // for view current order popup
   const [viewCurrentOrder, setViewCurrentOrder] = React.useState(false);
@@ -54,7 +66,6 @@ export default function Checkout() {
       {/* current order in progress box */}
       <div>
         {currentOrderInProgress && 
-        <div>
           <div id='currentOrder'>
             <h1 id='currentOrderTitle'>Current Order</h1>
             <div className='rowInfo'>
@@ -63,7 +74,6 @@ export default function Checkout() {
             </div>
             <button id='viewDetails' onClick={viewCurrentOrderDetails}>View Details {'>'}</button>
           </div>
-        </div>
         }
       </div>
 

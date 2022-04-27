@@ -8,7 +8,7 @@ function Help(props) {
     }
 
     return (props.trigger) ? (
-        <div className='helpPage'>
+        <div className='helpPage' style={{height:document.documentElement.scrollHeight+'px'}}>
             <div className='topBar'>
                 <button className='back-btn' onClick={closePage}>{'<'}</button>
                 <h3 id='title'>Help</h3>

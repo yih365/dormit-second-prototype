@@ -30,7 +30,7 @@ function CurrentOrder(props) {
     }
 
     return (props.trigger) ? (
-        <div className='currentOrder'>
+        <div className='currentOrder' style={{height:document.documentElement.scrollHeight+'px'}} >
             <div className='topBar'>
                 <h2 id='title'>My Cart</h2>
                 <br/>
