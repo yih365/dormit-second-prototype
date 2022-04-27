@@ -152,6 +152,8 @@
 }
 
 .images {
+    display: flex;
+    justify-content: flex-start;
     width: 250px;
     height: 175px;
     background-color: gray;
@@ -162,4 +164,8 @@
     font-size: large;
     font-weight: bold;
     margin: 0;
+    max-height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 250px;
 }

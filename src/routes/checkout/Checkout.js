@@ -30,7 +30,7 @@ export default function Checkout() {
     'items': [chip1, chip2],
     'date': 'March 21 at 08:05pm',
     'price': 11.55,
-    'item names': 'chip1, chip2'
+    'item names': 'chip1, chip2, other, testing, other, others, others, otheraksdlfj alksdfalskdf aslkdf asl fsdf asdf askdf aoasjdfk otjfasdfjasdfjaskdfjkdjfs asldkf s'
   });
   orders.push({
     'items': [chip1],
@@ -54,12 +54,16 @@ export default function Checkout() {
   // for view current order popup
   const [viewCurrentOrder, setViewCurrentOrder] = React.useState(false);
   const viewCurrentOrderDetails = () => {
+    window.scrollTo(0, 0)
     setViewCurrentOrder(true);
   }
 
   // for view FAQ popup
   const [viewHelp, setViewHelp] = React. useState(false);
-  const viewHelpPage = () => { setViewHelp(true) };
+  const viewHelpPage = () => {
+    window.scrollTo(0, 0)
+    setViewHelp(true);
+  };
 
   return (
     <div className='outsideBox'>
