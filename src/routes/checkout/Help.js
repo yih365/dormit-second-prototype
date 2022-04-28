@@ -17,7 +17,9 @@ function Help(props) {
             <div className='faq'>
                 <p id='image'> </p>
                 <br/>
-                <h1>FAQ</h1>
+                <div className='faqTitle'>
+                    <h1>FAQ<hr/></h1>
+                </div>
                 <br/>
                 <div className='rows'>
                     <div className='columns'>

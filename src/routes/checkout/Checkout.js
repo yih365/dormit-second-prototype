@@ -8,7 +8,7 @@ export default function Checkout() {
 
   // Example of current order in progress
   const currentOrderInProgress = true;
-  var currentOrder = {
+  const currentOrder = {
     'id': '934rjfe',
     'store': 'store1',
     'items': ['chips', 'chips2'],
